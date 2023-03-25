@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Kumbh Sans';
+    font-weight: 400;
+    src: url('fonts/KumbhSans-Regular.woff2') format('woff2'),
+         url('fonts/KumbhSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    font-weight: 700;
+    src: url('fonts/KumbhSans-Bold.woff2') format('woff2'),
+         url('fonts/KumbhSans-Bold.woff') format('woff');
+}
+
+
+.attribution {
+    display: none;
+}
+
+html {
+    background-color: hsl(185, 75%, 39%);
+}
+
+
+
+body {
+    background-image: url('images/bg-pattern-bottom.svg'),
+                      url('images/bg-pattern-top.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat ;
+    background-position: bottom right,
+                         top left;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.card {
+    background-image: url('images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+
+    width: 21.8rem;
+    height: 25rem;
+    background-color: white;
+
+    display: grid;
+    grid-template-rows: 0.75fr repeat(3,1fr);
+    grid-template-areas:
+    'empty'
+    'img'
+    'coords'
+    'stats';
+
+    border-radius: 1rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.485);
+}
+img {
+    border-radius: 50%;
+    border: 5px white solid;
+}
+.img {
+    grid-area: img;
+    margin: auto;
+}
+
+.coords {
+    grid-area: coords;
+    text-align: center;
+    margin-top: 1.5rem;  
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.name {
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+}
+.age,.city {
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
+}
+.age {
+    padding-left: 0.5rem;
+}
+.city {
+    padding-top: 0.5rem;
+}
+
+
+
+
+.stats {
+    grid-area: stats;
+    text-align: center;
+    padding-top: 1.75rem;
+    margin-bottom: 0;
+
+
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-areas: 'followers likes photos';
+
+    font-family: 'Kumbh Sans', sans-serif;
+
+    border-top: 1px hsla(227, 10%, 46%, 0.512) solid;
+}
+
+.number {
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);;
+}
+.stat {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.125rem;
+    color: hsl(227, 10%, 46%);
+    
+    padding-top: 0.4rem;
+}
+
+.element-1 {
+    grid-area: followers;
+}
+.element-2 {
+    grid-area: likes;
+}
+.element-3 {
+    grid-area: photos;
+}
