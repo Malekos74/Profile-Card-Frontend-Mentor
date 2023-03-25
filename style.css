@@ -16,19 +16,11 @@
     display: none;
 }
 
-html {
-    background-color: hsl(185, 75%, 39%);
-}
-
-
-
 body {
-    background-image: url('images/bg-pattern-bottom.svg'),
-                      url('images/bg-pattern-top.svg');
-    background-attachment: fixed;
-    background-repeat: no-repeat ;
-    background-position: bottom right,
-                         top left;
+    background: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+    background-repeat: no-repeat, no-repeat;
+    background-color: hsl(185deg, 75%, 39%);
 }
 
 main {
